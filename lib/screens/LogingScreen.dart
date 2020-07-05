@@ -69,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: ScreenUtil.getInstance().setHeight(35),
                   ),
                   LoginCard(),
-                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(60)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
@@ -125,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                   ),
                   SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(40),
+                    height: ScreenUtil.getInstance().setHeight(60),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
