@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'LogingScreen.dart';
 
 //
 
@@ -16,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(Duration(seconds: 3), (){
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => null,
+        builder: (context) => LoginScreen(),
       ));
     });
   }
@@ -34,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
                  mainAxisAlignment: MainAxisAlignment.center,
                  children: <Widget>[
                    Padding(padding: EdgeInsets.only(top: 80.0)),
-                   Image(image: AssetImage('assets/images/splashIcon.png'),width: 200.0),
+                   Image(image: AssetImage("assets/images/splashIcon.png"),width: 200.0),
                    
                  ],
                ),
