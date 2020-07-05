@@ -39,6 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
           width: ScreenUtil.getInstance().setWidth(120),
           height: 1.0,
           color: Colors.black26.withOpacity(.2),
+          
         ),
       );
 
