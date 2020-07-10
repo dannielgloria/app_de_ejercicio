@@ -1,3 +1,6 @@
+import 'package:app_de_ejercicio/screens/IntroScreen.dart';
+import 'package:app_de_ejercicio/styles/colorStyle.dart';
+import 'package:app_de_ejercicio/styles/fontStyle.dart';
 import 'package:app_de_ejercicio/widgets/LoginCard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -86,8 +89,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             width: 8.0,
                           ),
                           Text("Recordarme",
-                              style: TextStyle(
-                                  fontSize: 12, fontFamily: "Oxygen"))
+                              style: dSimpleStyle,
+                          )
                         ],
                       ),
                       InkWell(
@@ -95,28 +98,18 @@ class _LoginScreenState extends State<LoginScreen> {
                           width: ScreenUtil.getInstance().setWidth(330),
                           height: ScreenUtil.getInstance().setHeight(100),
                           decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: [
-                                Color(0xFF17ead9),
-                                Color(0xFF6078ea)
-                              ]),
+                              gradient: dColorGradient,
                               borderRadius: BorderRadius.circular(6.0),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Color(0xFF6078ea).withOpacity(.3),
-                                    offset: Offset(0.0, 8.0),
-                                    blurRadius: 8.0)
-                              ]),
+                              boxShadow: dColorBoxShadow,
+                          ),
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
                               onTap: () {},
                               child: Center(
                                 child: Text("Iniciar",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: "Oxygen-Bold",
-                                        fontSize: 18,
-                                        letterSpacing: 1.0)),
+                                    style: dButtonStyle
+                                ),
                               ),
                             ),
                           ),
@@ -131,11 +124,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context)=> IntroScreen()),
+                          );
+                        },
                         child: Text("REGISTRARME",
-                            style: TextStyle(
-                                color: Color(0xFF5d74e3),
-                                fontFamily: "Oxygen")),
+                            style: dLinkStyle
+                            ),
                       )
                     ],
                   ),

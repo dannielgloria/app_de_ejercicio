@@ -1,3 +1,4 @@
+import 'package:app_de_ejercicio/styles/fontStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -31,16 +32,11 @@ class LoginCard extends StatelessWidget {
           children: <Widget>[
             Text("EJERCITANDO MI CUERPO Y MENTE", 
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: ScreenUtil.getInstance().setSp(45),
-                fontFamily: "Oxygen-Bold",
-                letterSpacing: 0.5)
+              style: dTitleStyle,
             ),
             SizedBox(height: ScreenUtil.getInstance().setHeight(45)),
             Text("Correo",
-              style: TextStyle(
-                fontSize: ScreenUtil.getInstance().setSp(30),
-                fontFamily: "Oxygen")
+              style: dSimpleStyle,
             ),
             TextField(
               decoration: InputDecoration(
@@ -49,9 +45,7 @@ class LoginCard extends StatelessWidget {
             ),
             SizedBox(height: ScreenUtil.getInstance().setHeight(30)),
             Text("Contraseña",
-                style: TextStyle(
-                  fontFamily: "Oxygen",
-                  fontSize: ScreenUtil.getInstance().setSp(30))
+                style: dSimpleStyle,
             ),
             TextField(
               obscureText: true,
@@ -65,10 +59,7 @@ class LoginCard extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "¿Olvidaste tu contraseña?",
-                  style: TextStyle(
-                      color: Colors.blue,
-                      fontFamily: "Oxigen",
-                      fontSize: ScreenUtil.getInstance().setSp(28)),
+                  style: dLinkStyle,
                 )
               ],
             ),
