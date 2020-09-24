@@ -94,7 +94,7 @@ class _IntroScreenState extends State<IntroScreen> {
                             
                             SizedBox(height: 15.0),
                             Text(
-                              'Hola Fer, te damos una cálida bienvenida a tu posiblemente nueva aplicación favorita',
+                              'sdfsdfsdfasdfasfasf',
                               style: dSimpleStyle,
                             ),
                           ],
@@ -123,7 +123,7 @@ class _IntroScreenState extends State<IntroScreen> {
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'El no salir de casa no fue una tarea sencilla, posiblemente quisiste salir para ver a alguien, a caminar o tan solo ir a la tienda',
+                              'asdasdasfdasdasdasdasdasdSDA',
                               style: dSimpleStyle,
                             ),
                           ],
@@ -152,7 +152,7 @@ class _IntroScreenState extends State<IntroScreen> {
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'El no salir de casa no fue una tarea sencilla, posiblemente quisiste salir para ver a alguien, a caminar o tan solo ir a la tienda',
+                              'sdfsdfsdfsdfsdfsdfsdfsdfs',
                               style: dSimpleStyle,
                             ),
                           ],
