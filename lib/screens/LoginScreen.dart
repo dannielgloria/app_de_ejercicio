@@ -42,7 +42,6 @@ class _LoginScreenState extends State<LoginScreen> {
           width: ScreenUtil.getInstance().setWidth(120),
           height: 1.0,
           color: Colors.black26.withOpacity(.2),
-          
         ),
       );
 
@@ -88,8 +87,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           SizedBox(
                             width: 8.0,
                           ),
-                          Text("Recordarme",
-                              style: dSimpleStyle,
+                          Text(
+                            "Recordarme",
+                            style: dSimpleStyle,
                           )
                         ],
                       ),
@@ -98,18 +98,16 @@ class _LoginScreenState extends State<LoginScreen> {
                           width: ScreenUtil.getInstance().setWidth(330),
                           height: ScreenUtil.getInstance().setHeight(100),
                           decoration: BoxDecoration(
-                              gradient: dColorGradient,
-                              borderRadius: BorderRadius.circular(6.0),
-                              boxShadow: dColorBoxShadow,
+                            gradient: dGradientColor,
+                            borderRadius: BorderRadius.circular(6.0),
+                            boxShadow: dBoxShadowColor,
                           ),
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
                               onTap: () {},
                               child: Center(
-                                child: Text("Iniciar",
-                                    style: dButtonStyle
-                                ),
+                                child: Text("Iniciar", style: dButtonStyle),
                               ),
                             ),
                           ),
@@ -127,12 +125,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context)=> IntroScreen()),
+                            MaterialPageRoute(
+                                builder: (context) => IntroScreen()),
                           );
                         },
-                        child: Text("REGISTRARME",
-                            style: dLinkStyle
-                            ),
+                        child: Text("REGISTRARME", style: dLinkStyle),
                       )
                     ],
                   ),

@@ -1,6 +1,7 @@
 import 'package:app_de_ejercicio/styles/colorStyle.dart';
 import 'package:app_de_ejercicio/styles/fontStyle.dart';
 import 'package:app_de_ejercicio/widgets/RegisterCard.dart';
+import 'package:app_de_ejercicio/widgets/RegisterCardTwo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,27 +12,26 @@ class IntroScreen extends StatefulWidget {
 }
 
 class _IntroScreenState extends State<IntroScreen> {
-  final int _numPages = 4;
+  final int _numPages = 5;
   final PageController _pageController = PageController(initialPage: 0);
   int _currentPage;
-  
-  List<Widget> _buildPageIndicator(){
-    List<Widget> list =[];
-    for (int i=0; i < _numPages; i++){
-      list.add(i == _currentPage ? _indicator(true):_indicator(false));
+
+  List<Widget> _buildPageIndicator() {
+    List<Widget> list = [];
+    for (int i = 0; i < _numPages; i++) {
+      list.add(i == _currentPage ? _indicator(true) : _indicator(false));
     }
     return list;
   }
 
-  Widget _indicator(bool isActive){
+  Widget _indicator(bool isActive) {
     return AnimatedContainer(
       duration: Duration(milliseconds: 150),
       margin: EdgeInsets.symmetric(horizontal: 8.0),
       height: isActive ? 17.0 : 13.0,
       width: isActive ? 17.0 : 13.0,
       decoration: BoxDecoration(
-        color: isActive ? Color(0xFF006ba6) 
-        : Colors.grey[350],
+        color: isActive ? Color(0xFF006ba6) : Colors.grey[350],
         borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
     );
@@ -87,11 +87,11 @@ class _IntroScreenState extends State<IntroScreen> {
                             SizedBox(height: 30.0),
                             Center(
                               child: Text(
-                              'EJERCICIO FISICO',
-                              style: dTitleStyle,
+                                'EJERCICIO FISICO',
+                                style: dTitleStyle,
+                              ),
                             ),
-                            ),
-                            
+
                             SizedBox(height: 15.0),
                             Text(
                               'sdfsdfsdfasdfasfasf',
@@ -114,12 +114,10 @@ class _IntroScreenState extends State<IntroScreen> {
                             //     width: 300.0,
                             //   ),
                             // ),
-                            
+
                             SizedBox(height: 30.0),
                             Center(
-                              child: Text(
-                              'IMPEDIMENTOS',
-                              style: dTitleStyle),
+                              child: Text('IMPEDIMENTOS', style: dTitleStyle),
                             ),
                             SizedBox(height: 15.0),
                             Text(
@@ -143,12 +141,11 @@ class _IntroScreenState extends State<IntroScreen> {
                             //     width: 300.0,
                             //   ),
                             // ),
-                
+
                             SizedBox(height: 30.0),
                             Center(
-                              child: Text(
-                              'ACTITUD AL EJERCICIO',
-                              style: dTitleStyle),
+                              child: Text('ACTITUD AL EJERCICIO',
+                                  style: dTitleStyle),
                             ),
                             SizedBox(height: 15.0),
                             Text(
@@ -181,9 +178,32 @@ class _IntroScreenState extends State<IntroScreen> {
                             //   style: dTitleStyle,
                             //   textAlign: TextAlign.center,
                             // ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(40.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            // Center(
+                            //   child: Image(
+                            //     image: AssetImage(
+                            //       'assets/images/congrats.png',
+                            //     ),
+                            //     height: 300.0,
+                            //     width: 300.0,
+                            //   ),
+                            // ),
 
+                            RegisterCardTwo(),
 
-
+                            // SizedBox(height: 30.0),
+                            // Text(
+                            //   'Pero ¡hey! lo lograste ahora estas a salvo',
+                            //   style: dTitleStyle,
+                            //   textAlign: TextAlign.center,
+                            // ),
                           ],
                         ),
                       ),
@@ -247,7 +267,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context)=> null),
+                    MaterialPageRoute(builder: (context) => null),
                   );
                 },
                 child: Center(
@@ -255,17 +275,15 @@ class _IntroScreenState extends State<IntroScreen> {
                     width: ScreenUtil.getInstance().setWidth(800),
                     height: ScreenUtil.getInstance().setHeight(180),
                     decoration: BoxDecoration(
-                      gradient: dColorGradient,
+                      gradient: dGradientColor,
                       borderRadius: BorderRadius.circular(6.0),
-                      boxShadow: dColorBoxShadow,
+                      boxShadow: dBoxShadowColor,
                     ),
                     child: Material(
                       color: Colors.transparent,
                       child: InkWell(
                         child: Center(
-                          child: Text("ACEPTAR",
-                              style: dButtonStyle
-                          ),
+                          child: Text("ACEPTAR", style: dButtonStyle),
                         ),
                       ),
                     ),
@@ -276,6 +294,7 @@ class _IntroScreenState extends State<IntroScreen> {
           : Text(''),
     );
   }
+
   // user defined function
   void _showDialog() {
     // flutter defined function
@@ -284,8 +303,7 @@ class _IntroScreenState extends State<IntroScreen> {
         builder: (BuildContext context) {
           return Dialog(
             shape: RoundedRectangleBorder(
-                borderRadius:
-                    BorderRadius.circular(20.0)), //this right here
+                borderRadius: BorderRadius.circular(20.0)), //this right here
             child: Container(
               height: 150,
               child: Padding(
@@ -295,16 +313,16 @@ class _IntroScreenState extends State<IntroScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextField(
-                      textAlign: TextAlign.center,
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          labelText: 'Te recomendamos no saltarte\npasos te espera una gran sorpresa!')
-                    ),
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            labelText:
+                                'Te recomendamos no saltarte\npasos te espera una gran sorpresa!')),
                     SizedBox(
                       width: 320.0,
                       child: RaisedButton(
                         onPressed: () {
-                          Navigator.pop(context, true); 
+                          Navigator.pop(context, true);
                         },
                         child: Text(
                           "Vale",
@@ -320,5 +338,4 @@ class _IntroScreenState extends State<IntroScreen> {
           );
         });
   }
-  
 }

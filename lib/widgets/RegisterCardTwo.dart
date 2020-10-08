@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class RegisterCard extends StatelessWidget {
+class RegisterCardTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,36 +34,57 @@ class RegisterCard extends StatelessWidget {
               // ),
               // SizedBox(height: ScreenUtil.getInstance().setHeight(35)),
               Text(
-                "Nombre",
-                style: dRegisterStyle,
-              ),
-              TextField(
-                  decoration: InputDecoration(
-                      hintText: "nombre",
-                      hintStyle:
-                          TextStyle(color: Colors.grey, fontSize: 18.0))),
-              SizedBox(height: ScreenUtil.getInstance().setHeight(33)),
-              Text(
-                "Correo",
-                style: dRegisterStyle,
-              ),
-              TextField(
-                  decoration: InputDecoration(
-                      hintText: "correo@ejemplo.com",
-                      hintStyle:
-                          TextStyle(color: Colors.grey, fontSize: 18.0))),
-              SizedBox(height: ScreenUtil.getInstance().setHeight(33)),
-              Text(
-                "Contraseña",
+                "Altura",
                 style: dRegisterStyle,
               ),
               TextField(
                 decoration: InputDecoration(
-                    hintText: "Contraseña",
+                    hintText: "Altura en cm",
                     hintStyle: TextStyle(color: Colors.grey, fontSize: 18.0)),
+                keyboardType: TextInputType.number,
+                inputFormatters: <TextInputFormatter>[
+                  WhitelistingTextInputFormatter.digitsOnly
+                ],
               ),
-
-              SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
+              SizedBox(height: ScreenUtil.getInstance().setHeight(33)),
+              Text(
+                "Peso",
+                style: dRegisterStyle,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    hintText: "Peso en kg",
+                    hintStyle: TextStyle(color: Colors.grey, fontSize: 18.0)),
+                keyboardType: TextInputType.number,
+                inputFormatters: <TextInputFormatter>[
+                  WhitelistingTextInputFormatter.digitsOnly
+                ],
+              ),
+              SizedBox(height: ScreenUtil.getInstance().setHeight(33)),
+              Text(
+                "Año de nacimiento",
+                style: dRegisterStyle,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    hintText: "AAAA",
+                    hintStyle: TextStyle(color: Colors.grey, fontSize: 18.0)),
+                keyboardType: TextInputType.number,
+                inputFormatters: <TextInputFormatter>[
+                  WhitelistingTextInputFormatter.digitsOnly
+                ],
+              ),
+              SizedBox(height: ScreenUtil.getInstance().setHeight(33)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "Acepto los términos y condiciones",
+                    style: dLinkStyle,
+                  )
+                ],
+              ),
+              SizedBox(height: ScreenUtil.getInstance().setHeight(35)),
             ],
           )),
     );
