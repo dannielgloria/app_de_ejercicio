@@ -1,3 +1,4 @@
+import 'package:app_de_ejercicio/screens/HomeScreen.dart';
 import 'package:app_de_ejercicio/styles/colorStyle.dart';
 import 'package:app_de_ejercicio/styles/fontStyle.dart';
 import 'package:app_de_ejercicio/widgets/RegisterCard.dart';
@@ -267,7 +268,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => null),
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
                   );
                 },
                 child: Center(

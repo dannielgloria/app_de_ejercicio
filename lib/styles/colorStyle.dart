@@ -12,4 +12,5 @@ final dBoxShadowColor = [
 
 final dIconColor = Color(0xFF17ead9);
 final dTextColor = Color(0xFF222B45);
-final dShadowColor = Color(0xFFE6E6E6);
+final dShadowColor = Color(0xFF6078ea).withOpacity(.3);
+final dBackgroundColor = Color(0xFF6078ea);

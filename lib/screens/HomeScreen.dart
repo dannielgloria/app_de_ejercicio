@@ -1,3 +1,4 @@
+import 'package:app_de_ejercicio/styles/colorStyle.dart';
 import 'package:app_de_ejercicio/widgets/BottomNavBar.dart';
 import 'package:app_de_ejercicio/widgets/CalendarCard.dart';
 import 'package:flutter/material.dart';
@@ -16,10 +17,10 @@ class HomeScreen extends StatelessWidget {
             // Here the height of the container is 45% of our total height
             height: size.height * .45,
             decoration: BoxDecoration(
-              color: Color(0xFFF5CEB8),
+              color: dBackgroundColor,
               image: DecorationImage(
                 alignment: Alignment.centerLeft,
-                image: AssetImage("assets/images/undraw_pilates_gpdb.png"),
+                image: AssetImage("assets/img/pattern.png"),
               ),
             ),
           ),
@@ -36,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                       height: 52,
                       width: 52,
                       decoration: BoxDecoration(
-                        color: Color(0xFFF2BEA1),
+                        color: dBackgroundColor,
                         shape: BoxShape.circle,
                       ),
                       child: SvgPicture.asset("assets/icons/menu.svg"),
@@ -59,17 +60,17 @@ class HomeScreen extends StatelessWidget {
                       children: <Widget>[
                         CategoryCard(
                           title: "Diet Recommendation",
-                          svgSrc: "assets/icons/Hamburger.svg",
+                          svgSrc: "assets/icons/calendar.svg",
                           press: () {},
                         ),
                         CategoryCard(
                           title: "Kegel Exercises",
-                          svgSrc: "assets/icons/Excrecises.svg",
+                          svgSrc: "assets/icons/calendar.svg",
                           press: () {},
                         ),
                         CategoryCard(
                           title: "Meditation",
-                          svgSrc: "assets/icons/Meditation.svg",
+                          svgSrc: "assets/icons/calendar.svg",
                           press: () {
                             Navigator.push(
                               context,
@@ -82,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         CategoryCard(
                           title: "Yoga",
-                          svgSrc: "assets/icons/yoga.svg",
+                          svgSrc: "assets/icons/calendar.svg",
                           press: () {},
                         ),
                       ],
